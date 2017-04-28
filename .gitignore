@@ -1,3 +1,12 @@
 __pycache__/
 data.db
 *.pyc
+.idea/
+pyvenv/
+section002/
+section003/
+section004/
+section005/
+section006/
+section007/
+section008/
