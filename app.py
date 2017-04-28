@@ -2,10 +2,10 @@ from flask import Flask
 from flask_jwt import JWT
 from flask_restful import Api
 
-from section008.resources.item import ItemList, Item
-from section008.resources.store import StoreList, Store
-from section008.resources.user import UserRegister
-from section008.security import authenticate, identity
+from .resources.item import ItemList, Item
+from .resources.store import StoreList, Store
+from .resources.user import UserRegister
+from .security import authenticate, identity
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -31,6 +31,6 @@ api.add_resource(StoreList, '/stores')
 api.add_resource(UserRegister, '/register')
 
 if __name__ == '__main__':
-    from section008.db import db
+    from .db import db
     db.init_app(app)
     app.run(port=5000, debug=True)

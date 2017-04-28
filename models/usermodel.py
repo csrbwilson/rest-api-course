@@ -1,5 +1,5 @@
-import sqlite3
-from section008.db import db
+
+from ..db import db
 
 
 class UserModel(db.Model):
